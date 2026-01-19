@@ -10,7 +10,7 @@ public class Rectangle {
 
         RectangleFigure rectangle = new RectangleFigure(length, width);
         // Выводи результата с двумя данными после заяпятой
-        System.out.println("Площадь прямоугольника: %.2f%n" + rectangle.getArea());
+        System.out.printf(java.util.Locale.US,"Площадь прямоугольника: %.2f%n", rectangle.getArea());
 
         in.close();
 
