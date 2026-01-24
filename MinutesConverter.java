@@ -4,8 +4,11 @@ public class MinutesConverter {
 
         Scanner in = new Scanner(System.in);
 
-        double minutes = readTotalMinutes(in);
-        System.out.print("Всего минут:" + minutes);
+        double totalMinutes = readTotalMinutes(in);
+
+        String formattedTime = format(totalMinutes);
+
+        System.out.print(formattedTime);
     }
     private static double readTotalMinutes(Scanner in){
 
@@ -47,6 +50,17 @@ public class MinutesConverter {
             System.out.println("Ошибка, неверный формат ввода");
         }
 
+    }
+
+    public static String format(double totalMinutes){
+        int hours = (int) (totalMinutes/60);
+        int minutes = (int) Math.round(totalMinutes%60);
+
+        if(minutes==60){
+            hours++;
+            minutes = 0;
+        }
+        return hours + " часов " + minutes + " минут ";
     }
 }
 
