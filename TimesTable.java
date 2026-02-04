@@ -14,5 +14,6 @@ public class TimesTable {
         }else{
             System.out.println("Число должно быть от 1 до 9");
             }
+        in.close();
     }
 }

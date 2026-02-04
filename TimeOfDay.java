@@ -26,7 +26,7 @@ public class TimeOfDay {
                 return;
             }
             switch (hour){
-                case 6,8,9,10,11 -> System.out.println("Утро");
+                case 6,7,8,9,10,11 -> System.out.println("Утро");
                 case 12,13,14,15,16,17 -> System.out.println("День");
                 case 18,19,20,21 -> System.out.println("Вечер");
                 case 22,23,0,1,2,3,4,5 -> System.out.println("Ночь");
@@ -34,5 +34,6 @@ public class TimeOfDay {
         } catch (NumberFormatException e){
             System.out.println("Введите время в формате HH или HH:MM");
         }
+        in.close();
     }
 }

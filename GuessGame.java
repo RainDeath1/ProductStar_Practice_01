@@ -9,7 +9,6 @@ public class GuessGame {
         int numberToGuess = random.nextInt(100) + 1;
         int tryCount = 0;
         while (true){
-            tryCount++;
             System.out.println("Введите число");
             if(!in.hasNextInt()){
                 System.out.println("Введите именно число");
@@ -17,6 +16,7 @@ public class GuessGame {
                 continue;
             }
             int userGuess = in.nextInt();
+            tryCount++;
             if(numberToGuess==userGuess){
                 System.out.println("Вы угадали. Количество попыток:" + tryCount);
                 break;
@@ -26,6 +26,8 @@ public class GuessGame {
                 System.out.println("Меньше");
                 }
             }
+        in.close();
         }
+
     }
 
