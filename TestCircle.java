@@ -50,7 +50,7 @@ public class TestCircle {
         double expected = Math.PI * 4;
         double actual = circle.getArea();
 
-        if(expected == actual){
+        if(Math.abs(expected-actual)<0.0001){
             System.out.println("Площадь верная");
         }else {
             System.out.println("Площадь неправильная");
