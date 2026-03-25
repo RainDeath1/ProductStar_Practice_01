@@ -5,7 +5,8 @@ public class Circle {
 
     public Circle(double radius){
         if(radius <= 0){
-            throw new IllegalArgumentException("Радиус должен быть больше нуля. " +
+            throw new IllegalArgumentException("Радиус должен" +
+                    " быть больше нуля. " +
                     "Передано: " + radius);
         }
         this.radius = radius;
