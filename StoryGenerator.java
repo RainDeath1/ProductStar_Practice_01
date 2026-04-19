@@ -28,7 +28,7 @@ public class StoryGenerator{
         places.add("в космосе");
 
         System.out.println("Добро пожаловать в генератор случайных историй");
-        System.out.println("У насесть персонажи (" + characters.size() +"шт.), "
+        System.out.println("У нас есть персонажи (" + characters.size() +"шт.), "
                 +"(" + actions.size() +"шт.),"
                 + "(" + places.size() +"шт.)" );
 

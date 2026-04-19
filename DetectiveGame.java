@@ -12,7 +12,7 @@ public class DetectiveGame {
 
         Set<String> dbClues = new HashSet<>();
 
-        dbClues.add("Опечаток пальца надвери");
+        dbClues.add("Опечаток пальца на двери");
         dbClues.add("Запись с камеры видеонаблюдения");
         dbClues.add("Волосы на кресле");
         dbClues.add("След обуви");
@@ -40,7 +40,7 @@ public class DetectiveGame {
                     if (foundClues.add(newClue)) {
                         System.out.println("Улика \"" + newClue + "\"добавлена.");
                     } else {
-                        System.out.println("Такая улика ужесуществует");
+                        System.out.println("Такая улика уже существует");
                     }
                     break;
 
@@ -69,9 +69,11 @@ public class DetectiveGame {
 
                     boolean hasMatches = false;
                     for (String clue : foundClues) {
-                        if (dbClues.contains(clue)) {
-                            System.out.println("- " + clue);
-                            hasMatches = true;
+                        for(String dbClue : dbClues) {
+                            if(dbClue.equalsIgnoreCase(clue)){
+                                System.out.println("- " + clue);
+                                hasMatches = true;
+                            }
                         }
                     }
 
