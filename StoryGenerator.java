@@ -92,7 +92,7 @@ public class StoryGenerator{
                     break;
 
                 case 6:
-                    System.out.println("Прграмма завершена.");
+                    System.out.println("Программа завершена.");
                     break;
 
                 default:
