@@ -1,0 +1,45 @@
+package org.example;
+
+import java.util.Objects;
+public class Player {
+    private int id;
+    private String name;
+    private int rating;
+
+    public Player(int id, String name, int rating ){
+        this.id = id;
+        this.name = name;
+        this.rating = rating;
+    }
+
+    public int getId(){
+        return id;
+    }
+
+
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public int hashCode(){
+        return Objects.hash(id);
+    }
+
+    @Override
+    public String toString(){
+        return name + " (ID" + id + "Рейтинг" + rating + ")";
+    }
+}
