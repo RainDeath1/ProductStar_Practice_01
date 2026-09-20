@@ -24,7 +24,10 @@ import java.util.List;
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = ContactConfiguration.class)
 @Sql("classpath:contact.sql")
-public record ContactDaoTests(@Autowired ContactDao contactDao) {
+public class ContactDaoTests {
+
+    @Autowired
+    private ContactDao contactDao;
 
     private static final Contact IVAN = new Contact(
             1000L, "Ivan", "Ivanov", "iivanov@gmail.com", "1234567"
